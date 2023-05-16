@@ -7,7 +7,6 @@ const StatusBarHeight = StatusBar.currentHeight ? StatusBar.currentHeight + 22 :
 export default function HeaderMain({ name }) {
     return(
         <View style={styles.container}>
-            <StatusBar backgroundColor="#1e90ff" barStyle="dark-content" />
             <View style={styles.containerObjetos}>
                 <View style={styles.containerUsuario}>
                     <TouchableOpacity style={styles.botao}>
@@ -26,10 +25,10 @@ export default function HeaderMain({ name }) {
 const styles = StyleSheet.create({
     container:{
         width: '100%',
-        height: StatusBarHeight,
+        height: StatusBarHeight + 50,
         backgroundColor: '#1e90ff',
         padding: 10,
-        justifyContent: 'center',
+        justifyContent: 'flex-end',
     },
     containerObjetos:{
         flexDirection: 'row',

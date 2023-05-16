@@ -1,40 +1,25 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 import HeaderMain from "../../components/HeaderMain";
 
-import {Calendar, LocaleConfig} from 'react-native-calendars';
 import ListaOpcoes from "./components/ListaOpcoes";
 import ListaCirurgia from "./components/ListaCirurgia";
+import CalendarioMes from "./components/CalendarioMes";
 
 
 export default function Home() {
     return (
-        <View  style={styles.container}>
+        <ScrollView style={styles.container}
+            showsVerticalScrollIndicator={false}
+        >
             <HeaderMain name="Samuel Lima" />
             <View style={styles.conteudo}>
               <ListaOpcoes />
               <ListaCirurgia />
-              {/* <Calendar
-                // Customize the appearance of the calendar
-                style={{
-                  borderWidth: 1,
-                  borderColor: 'gray',
-                }}
-                // Specify the current date
-                current={'2012-03-01'}
-                // Callback that gets called when the user selects a day
-                onDayPress={day => {
-                  console.log('selected day', day);
-                }}
-                // Mark specific dates as marked
-                markedDates={{
-                  '2023-03-01': {selected: true, marked: true, selectedColor: 'blue'},
-                  '2023-03-02': {marked: true},
-                  '2012-03-03': {selected: true, marked: true, selectedColor: 'blue'}
-                }}
-              /> */}
+              <CalendarioMes />
             </View>
-        </View>
+            <View style={{height: 100}}></View>
+        </ScrollView>
     );
 }
 
