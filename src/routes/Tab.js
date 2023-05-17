@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Home from '../pages/Home';
+import StackHome from './StackHome';
 
 const Tab = createBottomTabNavigator();
 
@@ -14,7 +14,7 @@ export default function Routes() {
                 },
             }}
         >
-            <Tab.Screen name="Home" component={Home} 
+            <Tab.Screen name="Home" component={StackHome} 
                 options={{
                     headerShown: false,
                 }}

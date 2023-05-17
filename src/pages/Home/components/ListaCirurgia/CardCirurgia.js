@@ -1,10 +1,15 @@
 import React from 'react';
-import { View, Text, StyleSheet, ImageBackground } from 'react-native';
+import { View, Text, StyleSheet, ImageBackground, TouchableOpacity} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { Feather } from '@expo/vector-icons';
 
 export default function CardCirurgia({data}) {
+    const navigation = useNavigation();
+
     return(
-        <View style={styles.container}>
+        <TouchableOpacity 
+            onPress={() => navigation.navigate("DetalhesCirurgia", {nome: data.NomeEmpresa})}
+        style={styles.container}>
             <ImageBackground
                 style={styles.imagem}
                 source={{uri: data.Imagem}}
@@ -38,7 +43,7 @@ export default function CardCirurgia({data}) {
                     </View>
                 </View>
             </View>
-        </View>
+        </TouchableOpacity>
     )
 }
 

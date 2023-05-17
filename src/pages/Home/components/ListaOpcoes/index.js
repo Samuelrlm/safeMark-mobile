@@ -35,10 +35,7 @@ const styles = StyleSheet.create({
         maxHeight: 90,
         marginBottom: 14,
         marginTop: 18,
-        marginEnd: 14,
-        marginStart: 14,
         paddingTop: 5,
-
     },
     item:{
         width: 80,
